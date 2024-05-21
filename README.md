@@ -32,13 +32,19 @@ This web application does sentiment analysis on user input text, classifying it 
     pip install -r requirements.txt
     ```
 
-4. **Run the Flask app**:
+4. **Download the pre-trained model**:
+
+    ```sh
+    python download_model.py
+    ```
+
+5. **Run the Flask app**:
 
     ```sh
     python app.py
     ```
 
-5. **Open your browser** and go to `http://127.0.0.1:5000/`.
+6. **Open your browser** and go to `http://127.0.0.1:5000/`.
 
 ## Usage
 
