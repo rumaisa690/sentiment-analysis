@@ -24,8 +24,8 @@ I have worked on this project throughout this past semester and only just moved 
 2. **Create a virtual environment** (optional but recommended):
 
     ```sh
-    python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    python -m venv app
+    source app/bin/activate  # On Windows use `.\app\Scripts\activate`
     ```
 
 3. **Install the dependencies**:
