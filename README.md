@@ -3,6 +3,8 @@
 ## Project Overview
 This web application does sentiment analysis on user input text, classifying it as positive or negative. It uses Hugging Face's Transformers library with a pre-trained DistilBERT model and TensorFlow for the backend, and Flask to serve the application. The frontend is built using HTML, CSS, and JavaScript.
 
+I have worked on this project throughout this past semester and only just moved it over to this github account so that's why the repo looks recently created
+
 ## Installation
 
 ### Prerequisites
