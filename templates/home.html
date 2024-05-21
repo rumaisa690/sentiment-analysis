@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <title>Sentiment Analysis of Text</title>
+    <link rel = "stylesheet" type = "text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis Web Application</h1>
+        <!-- Form for users to input text -->
+        <form id="form">
+            <textarea id="text-input" name="text" placeholder="Enter text here..." required></textarea>
+            <button type="submit">Analyze</button>
+        </form>
+        <!-- Displaying the analysis -->
+        <div id="result">
+            <h2>Result:</h2>
+            <p id="sentiment"></p>
+        </div>
+    </div>
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Geting the input text from the form
+            let text = document.getElementById('text-input').value;
+            // Sending a POST request with the input text
+            fetch('/analyze', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'text=' + encodeURIComponent(text)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Displaying the result
+                document.getElementById('sentiment').innerText = `Sentiment: ${data.sentiment}`;
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+
+
+
+
+
+
+
+
+</html>
