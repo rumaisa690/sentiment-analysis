@@ -1,0 +1,61 @@
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e8f3db;
+    margin: 0;
+}
+
+/* Main container */
+.container {
+    text-align: center;
+    background: #dcedc9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Section container */
+.section {
+    margin-bottom: 40px;
+}
+
+/* Text area input */
+textarea, input[type="text"] {
+    width: calc(100% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Submit button */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+/* Result section */
+#result, #tweet-result {
+    margin-top: 20px;
+}
+
+/* Centering everything */
+html, body {
+    height: 100%;
+}
+
+h1, h2, h3, p {
+    color: #333;
+}

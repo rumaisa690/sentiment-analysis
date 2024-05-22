@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Web Application</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sentiment Analysis Web Application</h1>
+        
+        <!-- Section for user input analysis -->
+        <div class="section">
+            <h2>Analysis on User Input Text</h2>
+            <form id="form">
+                <textarea id="text-input" name="text" placeholder="Enter text here..." required></textarea>
+                <button type="submit">Analyze</button>
+            </form>
+            <div id="result">
+                <h3>Result:</h3>
+                <p id="sentiment"></p>
+            </div>
+        </div>
+        
+        <!-- Section for random tweet analysis -->
+        <div class="section">
+            <h2>Analysis on Generated Tweet</h2>
+            <form id="tweet-form">
+                <input type="text" id="keyword-input" name="keyword" placeholder="Enter keyword...">
+                <button type="button" id="generate-btn">Generate Tweet</button>
+            </form>
+            <div id="tweet-result">
+                <h3>Result:</h3>
+                <p id="tweet-text"></p>
+                <p id="tweet-sentiment"></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        // JavaScript for text input submission
+        document.getElementById('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let text = document.getElementById('text-input').value;
+            fetch('/analyze', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'text=' + encodeURIComponent(text)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('sentiment').innerText = `Sentiment: ${data.sentiment}`;
+            })
+            .catch(error => console.error('Error:', error));
+        });
+
+        // JavaScript for keyword submission
+        document.getElementById('generate-btn').addEventListener('click', function() {
+            let keyword = document.getElementById('keyword-input').value;
+            fetch('/fetch_tweet', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'keyword=' + encodeURIComponent(keyword)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('tweet-text').innerText = `Tweet: ${data.text}`;
+                document.getElementById('tweet-sentiment').innerText = `Sentiment: ${data.sentiment}`;
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+</html>
