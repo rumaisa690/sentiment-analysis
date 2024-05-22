@@ -19,7 +19,7 @@ I have worked on this project throughout this past semester and only just moved 
 1. **Cloning the repository**:
 
     ```sh
-    git clone https://github.com/yourusername/sentiment-analysisgit
+    git clone https://github.com/yourusername/sentiment-analysis.git
     cd sentiment-analysis
     ```
 
