@@ -19,8 +19,8 @@ I have worked on this project throughout this past semester and only just moved 
 1. **Cloning the repository**:
 
     ```sh
-    git clone https://github.com/yourusername/sentiment-analysis-app.git
-    cd sentiment-analysis-app
+    git clone https://github.com/yourusername/sentiment-analysisgit
+    cd sentiment-analysis
     ```
 
 2. **Create a virtual environment** (optional but recommended):
