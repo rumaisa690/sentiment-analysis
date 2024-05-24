@@ -65,10 +65,10 @@ Second Section
 4. The sentiment result (Positive or Negative) will be displayed
 
 ## Project Structure
-sentiment_app.py: Main Flask application file that handles routing and sentiment analysis
-templates/home.html: HTML file that defines the structure of the web application's frontend and includes JavaScript to handle form submissions and dynamic content updates
-static/style.css: CSS file for styling the web application's frontend
-model: Directory containing the pre-trained DistilBERT model for sentiment analysis
+- sentiment_app.py: Main Flask application file that handles routing and sentiment analysis
+- templates/home.html: HTML file that defines the structure of the web application's frontend and includes JavaScript to handle form submissions and dynamic content updates
+- static/style.css: CSS file for styling the web application's frontend
+- model: Directory containing the pre-trained DistilBERT model for sentiment analysis
 
 ## Explanation of the Sentiment Analysis Process
 
