@@ -9,11 +9,6 @@ I have worked on this project throughout this past semester and only just moved 
 
 ## Installation
 
-### Prerequisites
-
-- Python 3.7 or higher
-- Pip (Python package installer)
-
 ### Setup
 
 1. **Cloning the repository**:
